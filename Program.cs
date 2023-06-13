@@ -10,7 +10,7 @@ namespace Blog
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ReadUsers();
         }
 
         public static void ReadUsers()
