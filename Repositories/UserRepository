@@ -1,0 +1,14 @@
+using Blog.Models;
+
+namespace Blog.Repositories
+{
+    public class UserRepository
+    {
+
+        public IEnumerable<User> Get()
+        {
+            return null;
+        }
+
+    }
+}
