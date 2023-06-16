@@ -1,6 +1,5 @@
-﻿using Blog.Models;
+﻿using System;
 using Blog.Repositories;
-using Dapper.Contrib.Extensions;
 using Microsoft.Data.SqlClient;
 
 namespace Blog
@@ -11,79 +10,31 @@ namespace Blog
 
         static void Main(string[] args)
         {
-            //ReadUsers();
-            //ReadUser();
-            //CreateUser();
-            //UpdateUser();
-            DeleteUser();
+            var connection = new SqlConnection(CONNECTION_STRING);
+            connection.Open();
+
+            //ReadUsers(connection);
+            ReadRoles(connection);
+
+            connection.Close();
         }
 
-        public static void ReadUsers()
+        public static void ReadUsers(SqlConnection connection)
         {
-            var repository = new UserRepository();
+            var repository = new UserRepository(connection);
             var users = repository.Get();
 
             foreach (var user in users)
                 Console.WriteLine(user.Name);
         }
 
-        public static void ReadUser()
+        public static void ReadRoles(SqlConnection connection)
         {
-            using (var connection = new SqlConnection(CONNECTION_STRING))
-            {
-                var user = connection.Get<User>(1);
+            var repository = new RoleRepository(connection);
+            var roles = repository.Get();
 
-                Console.WriteLine(user.Name);
-            }
-        }
-
-        public static void CreateUser()
-        {
-            var user = new User()
-            {
-                Name = "Lucas Oliveira",
-                Email = "lucas.si@.com",
-                PasswordHash = "Hash",
-                Bio = "Equipe Rock",
-                Image = "https://..",
-                Slug = "equipe-rock"
-            };
-
-            using (var connection = new SqlConnection(CONNECTION_STRING))
-            {
-                connection.Insert<User>(user);
-                Console.WriteLine("Cadastro realizado com sucesso!");
-            }
-        }
-
-        public static void UpdateUser()
-        {
-            var user = new User()
-            {
-                Id = 2,
-                Name = "Lucas Oliveira",
-                Email = "lucas.si@.com",
-                PasswordHash = "Hash",
-                Bio = "desenvolvedor fullstack",
-                Image = "https://..",
-                Slug = "equipe-rock"
-            };
-
-            using (var connection = new SqlConnection(CONNECTION_STRING))
-            {
-                connection.Update<User>(user);
-                Console.WriteLine("Atualização realizada com sucesso!");
-            }
-        }
-
-        public static void DeleteUser()
-        {
-            using (var connection = new SqlConnection(CONNECTION_STRING))
-            {
-                var user = connection.Get<User>(2);
-                connection.Delete<User>(user);
-                Console.WriteLine("Usuário deletado com sucesso!");
-            }
+            foreach (var role in roles)
+                Console.WriteLine(role.Name);
         }
     }
 }

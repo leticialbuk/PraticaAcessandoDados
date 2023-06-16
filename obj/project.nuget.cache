@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e7olE5cg/4m9LJKwi1qYJgyKAkG15AT2tpLDxF/TCcrUwNZvaDXGx32E8Dy/zm+cVjtvZUokm4z5isqQq0GuTQ==",
+  "dgSpecHash": "ZLisSbCwW+1xsid/DrSx3+xlWBRXoVtXiV12esthMf+mKmGXIR4iKci7APo+zOlNtR6j7oBtFT4Btj+6vJE+kw==",
   "success": true,
-  "projectFilePath": "C:\\Dev\\PraticaAcessandoDados\\PraticaAcessandoDados.csproj",
+  "projectFilePath": "C:\\Dev\\Blog\\PraticaAcessandoDados.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\letic\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\letic\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

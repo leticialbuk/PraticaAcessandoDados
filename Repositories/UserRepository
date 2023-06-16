@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Blog.Models;
 using Dapper.Contrib.Extensions;
 using Microsoft.Data.SqlClient;
@@ -18,7 +19,15 @@ namespace Blog.Repositories
             => _connection.Get<User>(id);
 
         public void Create(User user)
-            => _connection.Get<User>(user);
+        {
+            user.Id = 0;
+            _connection.Get<User>(user);
+        }
 
+        public void Update(User user)
+        {
+            if (user.Id != 0)
+                _connection.Update<User>(user);
+        }
     }
 }

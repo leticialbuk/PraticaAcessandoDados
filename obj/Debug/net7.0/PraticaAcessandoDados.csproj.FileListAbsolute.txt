@@ -1,0 +1,5 @@
+C:\Dev\Blog\obj\Debug\net7.0\PraticaAcessandoDados.csproj.AssemblyReference.cache
+C:\Dev\Blog\obj\Debug\net7.0\PraticaAcessandoDados.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\Blog\obj\Debug\net7.0\PraticaAcessandoDados.AssemblyInfoInputs.cache
+C:\Dev\Blog\obj\Debug\net7.0\PraticaAcessandoDados.AssemblyInfo.cs
+C:\Dev\Blog\obj\Debug\net7.0\PraticaAcessandoDados.csproj.CoreCompileInputs.cache

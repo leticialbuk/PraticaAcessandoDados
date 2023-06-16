@@ -2074,11 +2074,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev\\PraticaAcessandoDados\\PraticaAcessandoDados.csproj",
+      "projectUniqueName": "C:\\Dev\\Blog\\PraticaAcessandoDados.csproj",
       "projectName": "PraticaAcessandoDados",
-      "projectPath": "C:\\Dev\\PraticaAcessandoDados\\PraticaAcessandoDados.csproj",
+      "projectPath": "C:\\Dev\\Blog\\PraticaAcessandoDados.csproj",
       "packagesPath": "C:\\Users\\letic\\.nuget\\packages\\",
-      "outputPath": "C:\\Dev\\PraticaAcessandoDados\\obj\\",
+      "outputPath": "C:\\Dev\\Blog\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\letic\\AppData\\Roaming\\NuGet\\NuGet.Config"
